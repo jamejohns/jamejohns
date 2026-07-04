@@ -1,8 +1,8 @@
 <h1 align="center">James</h1>
 
 <p align="center">
-  <strong>Security tools for TRON</strong><br>
-  Read-only products · static client · credentials on the edge
+  <strong>Blockchain security · TRON ecosystem</strong><br>
+  Product builder behind TRONSEC
 </p>
 
 <p align="center">
@@ -24,11 +24,11 @@
 
 **[TRONSEC](https://tronsec.io/app/)** — on-chain security terminal for TRON.
 
-Wallet risk, TRC-20 approvals, AML heuristics, contract signals, transaction decoding, URL reputation, vanity generation. Eight locales. No wallet connect.
+Wallet risk, TRC-20 approvals, AML screening, contract audit, transaction decoding, URL reputation, vanity generation. Eight locales. No wallet connect.
 
-Production is a static app on Cloudflare Pages; upstream APIs sit behind a Worker. Keys never ship to the browser.
+Production: static client on Cloudflare Pages, upstream APIs behind a Worker — **credentials never ship to the browser**.
 
-[`jamejohns/tronsec`](https://github.com/jamejohns/tronsec) · MIT
+[`jamejohns/tronsec`](https://github.com/jamejohns/tronsec) · MIT · [`SECURITY.md`](https://github.com/jamejohns/tronsec/blob/main/SECURITY.md)
 
 </td>
 </tr>
@@ -36,28 +36,28 @@ Production is a static app on Cloudflare Pages; upstream APIs sit behind a Worke
 
 ---
 
-### How I build it
+### Security practice
 
-| Layer | What |
-|:------|:-----|
-| **Product** | Single-page security workbench — scan first, explain after, no account wall |
-| **Client** | Static HTML/JS, i18n, PWA shell; heavy work (vanity search) in Web Workers |
-| **Edge** | Cloudflare Worker proxy — TronGrid, TronScan, VirusTotal, rate limits, CORS |
-| **Deploy** | Pages + `_redirects`, locale trees, obfuscated prod / readable OSS export |
-| **Chain** | TRON mainnet — TRC-20, approvals, address & contract semantics |
+| Domain | Focus |
+|:-------|:------|
+| **On-chain analysis** | TRON wallets, TRC-20 flows, allowance / drainer risk, address hygiene |
+| **Smart contracts** | Privileged functions, proxy & upgrade patterns, TRON bytecode signals |
+| **AML & fraud** | Transaction screening, counterparty exposure, concentration & behaviour heuristics |
+| **Threat intelligence** | Phishing URLs, typosquatting, homoglyphs, multi-source reputation (VirusTotal) |
+| **Pre-sign safety** | Calldata decoding, approval visibility, scam-pattern warnings before users sign |
 
----
+**Architecture principles** — zero-custody UI, least-privilege read-only surface, server-side API keys on the edge, responsible disclosure, OSS export with automated secret scanning.
 
-### Contact
-
-| | |
-|:--|:--|
-| **Personal** | [@tronsec_james](https://t.me/tronsec_james) |
-| **Community** | [t.me/tronsec_chat](https://t.me/tronsec_chat) |
-| **Product** | [tronsec.io/app](https://tronsec.io/app/) |
+**Frameworks applied in product design** — OWASP secure-client practices · FATF-informed AML red-flag logic · defence-in-depth verification (TronGrid + TronScan + reputation feeds).
 
 ---
 
 <p align="center">
-  <sub>Building in public where it makes sense — core app is open source under MIT.</sub>
+  <sub>
+    <a href="https://tronsec.io/app/"><b>Open TRONSEC</b></a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/jamejohns/tronsec">Source</a>
+    &nbsp;·&nbsp;
+    <a href="https://t.me/tronsec_chat">Community</a>
+  </sub>
 </p>
