@@ -13,7 +13,7 @@
 
 <p align="center">
   <sub>
-    2+ years in Web3 security — wallet compromise patterns, TRC-20 approvals, phishing &amp; drainer surfaces, and read-only tooling that helps users decide before they sign.<br>
+    2+ years in Web3 security. Wallet compromise patterns, TRC-20 approvals, phishing &amp; drainer surfaces, and read-only tooling that helps users decide before they sign.<br>
     Building <a href="https://tronsec.io/app/"><b>TRONSEC</b></a> — open-source security terminal for TRON Mainnet.
   </sub>
 </p>
